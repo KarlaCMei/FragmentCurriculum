@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FragmentCurriculum</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="text_title_photo">FOTO</string>
+    <string name="text_title_data">DATOS PERSONALES</string>
+    <string name="text_title_information">INFORMACION DE CONTACTO</string>
+    <string name="text_title_additional_information">INFORMACION ADICIONAL</string>
+    <string name="text_title_experience">EXPERIENCIA EN LOS SIGUIENTES PROGRAMAS</string>
+    <string name="text_title_ability">CAPACIDAD PARA LAS SIGUIENTES APTITUDES</string>
+    <string name="text_title_employment_history">ANTECEDENTES LAVORALES</string>
+    <string name="text_title_save">GUARDAR</string>
+
+    //Strings de los hint para ingresar datos
+    <string name="hint_name">Introdusca su nombre</string>
+    <string name="hint_especialidad">Introdusca su especialidad</string>
+    <string name="hint_nacionalidad">Introdusca su nacionalidad</string>
+    <string name="hint_edad">Introdusca su edad</string>
+    <string name="hint_num_telefono">Numero de telefono</string>
+    <string name="hint_direccion">Dirección</string>
+    <string name="hint_objetivo_profesional">Objetivo profecional</string>
+    <string name="hint_hobbies">Hobbies</string>
+
+    //Strings para los check box
+    <string name="check_word">Word</string>
+    <string name="check_excel">Excel</string>
+    <string name="check_power">Power point</string>
+    <string name="check_programacion">Programacion</string>
+    <string name="check_bases">Bases de datos</string>
+
+    <string name="check_trabajo_equipo">Trabajo en equipo</string>
+    <string name="check_trabajo_presion">Trabajo bajo presion</string>
+    <string name="check_actitud">Actitud positiva</string>
+    <string name="check_compañerismo">Compañerismo</string>
+    <string name="check_capacidad_analitica">Capacidad analitica</string>
+</resources>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/nombre_dimen"
+            android:background="#D2BBAB"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/datosPersonales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/text_title_photo"
+                android:background="@drawable/esquina_redondeada"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icono_foto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/large_image_140dp"
+                android:src="@drawable/ic_icono"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/datosPersonales" />
+
+            <TextView
+                android:id="@+id/foto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:background="@drawable/esquina_redondeada"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/text_title_data"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/icono_foto" />
+
+            <EditText
+                android:id="@+id/editText_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Introdusca su nombre"
+                android:inputType="text"
+                android:text="hola"
+                android:textColorHint="#664023"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foto" />
+
+            <EditText
+                android:id="@+id/editText_especialidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Introdusca su especialidad"
+                android:inputType="text"
+                android:textColorHint="#664023"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_nombre" />
+
+            <EditText
+                android:id="@+id/editText_nacionalidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Introdusca su nacionalidad"
+                android:inputType="text"
+                android:textColorHint="#664023"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_especialidad" />
+
+            <EditText
+                android:id="@+id/editText_edad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Introdusca su edad"
+                android:inputType="number"
+                android:textColorHint="#664023"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_nacionalidad" />
+
+            <TextView
+                android:id="@+id/informacionDeContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/esquina_redondeada"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/text_title_information"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_edad"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <EditText
+                android:id="@+id/editText_numero_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Numero de telefono"
+                android:inputType="phone"
+                android:textColorHint="#664023"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/informacionDeContacto" />
+
+            <EditText
+                android:id="@+id/editText_direccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dirección"
+                android:inputType="text"
+                android:textColorHint="#664023"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_numero_telefono" />
+
+            <TextView
+                android:id="@+id/informacionAdicional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/esquina_redondeada"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/text_title_additional_information"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_direccion"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <EditText
+                android:id="@+id/editText_objetivo_profecional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Objetivo profecional"
+                android:inputType="text"
+                android:textColorHint="#664023"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/informacionAdicional" />
+
+            <EditText
+                android:id="@+id/editText_hobbies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Hobbies"
+                android:inputType="text"
+                android:textColorHint="#664023"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_objetivo_profecional" />
+
+            <TextView
+                android:id="@+id/experiencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/esquina_redondeada"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/text_title_experience"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_hobbies"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <CheckBox
+                android:id="@+id/check_Word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#2E1705"
+                android:text="Word"
+                android:textColor="#95490E"
+                android:textSize="@dimen/description_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/experiencia" />
+
+            <CheckBox
+                android:id="@+id/radioBtn_excel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#2E1705"
+                android:text="Excel"
+                android:textColor="#95490E"
+                android:textSize="@dimen/description_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check_Word" />
+
+            <CheckBox
+                android:id="@+id/radioBtn_power_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#2E1705"
+                android:text="Power point"
+                android:textColor="#95490E"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioBtn_excel" />
+
+            <CheckBox
+                android:id="@+id/radioBtn_programacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Programacion"
+                android:buttonTint="#2E1705"
+                android:textColor="#95490E"
+                app:layout_constraintTop_toBottomOf="@+id/radioBtn_power_point" />
+
+            <CheckBox
+                android:id="@+id/radioBtn_bases_de_datos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#2E1705"
+                android:text="Bases de datos"
+                android:textColor="#95490E"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioBtn_programacion" />
+
+            <TextView
+                android:id="@+id/aptitudes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/esquina_redondeada"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/text_title_ability"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioBtn_bases_de_datos"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <CheckBox
+                android:id="@+id/radioBtn_trabajo_equipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Trabajo en equipo"
+                android:buttonTint="#2E1705"
+                android:textColor="#95490E"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aptitudes" />
+
+            <CheckBox
+                android:id="@+id/radioBtn_trabajo_presion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Trabajo bajo presion"
+                android:buttonTint="#2E1705"
+                android:textColor="#95490E"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioBtn_trabajo_equipo" />
+
+            <CheckBox
+                android:id="@+id/radioBtn_actitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Actitud positiva"
+                android:buttonTint="#2E1705"
+                android:textColor="#95490E"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioBtn_trabajo_presion" />
+
+            <CheckBox
+                android:id="@+id/radioBtn_compañerismo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Compañerismo"
+                android:buttonTint="#2E1705"
+                android:textColor="#95490E"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioBtn_actitud" />
+
+            <CheckBox
+                android:id="@+id/radioBtn_analizar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Capacidad analitica"
+                android:buttonTint="#2E1705"
+                android:textColor="#95490E"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioBtn_compañerismo" />
+
+            <TextView
+                android:id="@+id/antecedentes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/esquina_redondeada"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/text_title_employment_history"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioBtn_analizar"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <EditText
+                android:id="@+id/editText_certificacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Certificación"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:inputType="text"
+                android:textColorHint="#664023"
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/antecedentes"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/editText_escuela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escuela donde estudio"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:inputType="text"
+                android:textColorHint="#664023"
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_certificacion"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/editText_ultimo_trabajo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ultimo trabajo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:inputType="text"
+                android:textColorHint="#664023"
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_escuela"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/editText_experiencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Experiencia laboral"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:inputType="number"
+                android:textColorHint="#664023"
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_ultimo_trabajo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/btn_guardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:backgroundTint="#472D2D"
+                app:layout_constraintTop_toBottomOf="@+id/editText_experiencia"
+                android:text="@string/text_title_save" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

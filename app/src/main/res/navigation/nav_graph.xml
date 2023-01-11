@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ingresarDatosFragment">
+
+    <fragment
+        android:id="@+id/ingresarDatosFragment"
+        android:name="com.example.fragmentcurriculum.IngresarDatosFragment"
+        android:label="fragment_ingresar_datos"
+        tools:layout="@layout/fragment_ingresar_datos" >
+        <action
+            android:id="@+id/action_ingresarDatosFragment_to_obtenerDatosFragment"
+            app:destination="@id/obtenerDatosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/obtenerDatosFragment"
+        android:name="com.example.fragmentcurriculum.ObtenerDatosFragment"
+        android:label="fragment_obtener_datos"
+        tools:layout="@layout/fragment_obtener_datos" />
+</navigation>
