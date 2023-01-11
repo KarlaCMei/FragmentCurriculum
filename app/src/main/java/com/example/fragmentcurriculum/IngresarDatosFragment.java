@@ -20,8 +20,6 @@ import com.example.fragmentcurriculum.databinding.FragmentIngresarDatosBinding;
 
 public class IngresarDatosFragment extends Fragment {
     private FragmentIngresarDatosBinding binding;
-    private EditText editName;
-    private Button btnResults;
 
 
     public IngresarDatosFragment() {
@@ -41,8 +39,8 @@ public class IngresarDatosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         //binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
-       // binding = DataBindingUtil.inflate(inflater,R.layout.fragment_ingresar_datos, container, false);
-       return inflater.inflate(R.layout.fragment_ingresar_datos, container, false);
+       binding = DataBindingUtil.inflate(inflater,R.layout.fragment_ingresar_datos, container, false);
+       return binding.getRoot();
     }
 
 
@@ -50,16 +48,13 @@ public class IngresarDatosFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        editName = view.findViewById(R.id.editText_especialidad);
-        btnResults = view.findViewById(R.id.btn_guardar);
-
         Bundle bundle2 = new Bundle();
-        bundle2.putString(Constants.USER_NAME,editName.getText().toString());
         //bundle.putString("KEY","KARLA");
 
-        btnResults.setOnClickListener(new View.OnClickListener() {
+        binding.btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bundle2.putString(Constants.USER_NAME,binding.editTextNombre.getText().toString());
                 Navigation.findNavController(v).navigate(R.id.action_ingresarDatosFragment_to_obtenerDatosFragment,bundle2);
 
             }

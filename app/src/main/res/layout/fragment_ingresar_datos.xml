@@ -64,7 +64,6 @@
                 android:gravity="center"
                 android:hint="Introdusca su nombre"
                 android:inputType="text"
-                android:text="hola"
                 android:textColorHint="#664023"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.552"
